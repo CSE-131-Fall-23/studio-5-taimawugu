@@ -14,7 +14,14 @@ public class Methods {
 	 * @return the Euclidean distance between (x1,y1) and (x2,y2)
 	 */
 	public static double distanceBetween(double x1, double y1, double x2, double y2) {
-		double distance = 0;
+		
+		
+		double xdist = x2-x1;
+		double ydist = y2-y1;
+		
+		double distance = Math.sqrt((xdist*xdist)+(ydist*ydist));
+		
+		
 		// FIXME: Hint use Math methods (e.g. Math.sqrt) to compute the distance
 		
 		return distance;
@@ -35,17 +42,20 @@ public class Methods {
 		// Blue ring with 3.0/4.0 the radius
 		// suggested rgb values: 0, 109, 219
 
-		
+		StdDraw.setPenColor(StdDraw.BLUE);
+		StdDraw.filledCircle(x, y, 0.3);
 
 		// Red ring with 1.0/2.0 the radius
 		// suggested rgb values: 146, 0, 0
 
-		
+		StdDraw.setPenColor(StdDraw.RED);
+		StdDraw.filledCircle(x, y, 0.2);
 
 		// Yellow ring with 1.0/4.0 the radius
 		// suggested rgb values: 255, 255, 109
 
-		
+		StdDraw.setPenColor(StdDraw.YELLOW);
+		StdDraw.filledCircle(x, y, 0.1);
 	}
 
 	/**
@@ -60,7 +70,12 @@ public class Methods {
 	 *         characters in the source String with the replacement String
 	 */
 	public static String substituteAll(String source, char target, String replacement) {
-		String result = "";
+		String text = source;
+		char ch = target;
+		String reptext = replacement;
+		String concatenatedText = text + reptext;
+		
+		String result = concatenatedText;
 		// TODO: Finish this method
 		
 		return result;
